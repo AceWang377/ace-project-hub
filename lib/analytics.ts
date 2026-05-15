@@ -12,6 +12,9 @@ export function trackEvent(payload: EventPayload) {
     return;
   }
 
+  const controller = new AbortController();
+  const timeout = window.setTimeout(() => controller.abort(), 1200);
+
   void fetch("/api/events", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -19,8 +22,12 @@ export function trackEvent(payload: EventPayload) {
       ...payload,
       source_path: window.location.pathname,
     }),
-    keepalive: true,
-  }).catch(() => {
-    // Analytics should never block navigation or form work.
-  });
+    signal: controller.signal,
+  })
+    .catch(() => {
+      // Analytics should never block navigation or form work.
+    })
+    .finally(() => {
+      window.clearTimeout(timeout);
+    });
 }

@@ -14,9 +14,9 @@ export function SiteFooter() {
               <Image
                 src="/brand/ace-logo.png"
                 alt="Ace logo"
-                width={40}
-                height={40}
-                className="scale-[1.42] object-cover"
+                width={56}
+                height={56}
+                className="max-w-none object-cover"
               />
             </span>
             <span>Ace Project Hub</span>
