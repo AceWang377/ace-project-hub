@@ -56,7 +56,7 @@ export function SiteFooter() {
         />
       </div>
       <div className="container-x border-t border-white/10 py-5 text-xs text-white/48">
-        Copyright {new Date().getFullYear()} Ace. All rights reserved.
+        Copyright 2026 Ace Zero Trading Ltd. All rights reserved.
       </div>
     </footer>
   );
