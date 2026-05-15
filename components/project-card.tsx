@@ -6,6 +6,17 @@ import { projectUrl, statusLabels } from "@/lib/projects";
 
 export function ProjectCard({ project, featured }: { project: Project; featured?: boolean }) {
   const accent = project.brand.accentColor ?? "#00c7d4";
+  const secondaryLink =
+    project.links.webApp ?? project.links.appStore ?? project.links.landing ?? project.links.github;
+  const secondaryLabel = project.links.webApp
+    ? "Open App"
+    : project.links.appStore
+      ? "App Store"
+      : project.links.landing
+        ? "Project Site"
+        : project.links.github
+          ? "GitHub"
+          : "";
 
   return (
     <article
@@ -49,14 +60,14 @@ export function ProjectCard({ project, featured }: { project: Project; featured?
           View Project
           <ArrowRight size={16} />
         </TrackedLink>
-        {project.links.webApp ? (
+        {secondaryLink ? (
           <TrackedLink
-            href={project.links.webApp}
-            eventName="web_app_click"
+            href={secondaryLink}
+            eventName={project.links.webApp ? "web_app_click" : "project_secondary_cta_click"}
             projectSlug={project.slug}
             className="inline-flex h-10 items-center gap-2 rounded-[8px] border border-[#101211]/12 px-4 text-sm font-bold text-[#101211] transition hover:border-[#101211]/30 hover:bg-[#f7f8f5]"
           >
-            Open App
+            {secondaryLabel}
             <ExternalLink size={15} />
           </TrackedLink>
         ) : null}

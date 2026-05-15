@@ -1,4 +1,5 @@
 import { GitBranch } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { projects } from "@/content/projects";
 import { siteConfig } from "@/lib/site";
@@ -9,8 +10,14 @@ export function SiteFooter() {
       <div className="container-x grid gap-10 py-12 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3 font-black">
-            <span className="flex size-9 items-center justify-center rounded-[8px] bg-white text-[0.76rem] text-[#101211] shadow-[inset_0_-3px_0_#00c7d4]">
-              ACE
+            <span className="flex size-10 items-center justify-center overflow-hidden rounded-[8px] bg-white">
+              <Image
+                src="/brand/ace-logo.png"
+                alt="Ace logo"
+                width={40}
+                height={40}
+                className="scale-[1.42] object-cover"
+              />
             </span>
             <span>Ace Project Hub</span>
           </div>

@@ -3,6 +3,7 @@ import { projects, type Project, type ProjectStatus } from "@/content/projects";
 export const statusLabels: Record<ProjectStatus, string> = {
   idea: "Idea",
   building: "Building",
+  unreviewed: "Unreviewed",
   in_review: "In review",
   private_beta: "Private beta",
   public_beta: "Public beta",

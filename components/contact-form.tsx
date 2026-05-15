@@ -44,7 +44,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-4" noValidate>
-      <input className="hidden" name="company" tabIndex={-1} autoComplete="off" />
+      <input className="hidden" name="company" tabIndex={-1} autoComplete="off" suppressHydrationWarning />
       <div className="grid gap-2 sm:grid-cols-2">
         <label className="grid gap-2 text-sm font-bold text-[#202522]">
           Email
@@ -54,6 +54,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
             required
             placeholder="you@example.com"
             className="h-12 rounded-[8px] border border-[#101211]/15 bg-white px-3 text-sm font-normal text-[#101211] shadow-sm"
+            suppressHydrationWarning
           />
         </label>
         <label className="grid gap-2 text-sm font-bold text-[#202522]">
@@ -62,6 +63,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
             name="name"
             placeholder="Optional"
             className="h-12 rounded-[8px] border border-[#101211]/15 bg-white px-3 text-sm font-normal text-[#101211] shadow-sm"
+            suppressHydrationWarning
           />
         </label>
       </div>
@@ -71,6 +73,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
           name="project_slug"
           defaultValue={defaultProject ?? ""}
           className="h-12 rounded-[8px] border border-[#101211]/15 bg-white px-3 text-sm font-normal text-[#101211] shadow-sm"
+          suppressHydrationWarning
         >
           <option value="">General</option>
           {projects.map((project) => (
@@ -88,6 +91,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
           required
           placeholder="Tell Ace what you need."
           className="resize-none rounded-[8px] border border-[#101211]/15 bg-white px-3 py-3 text-sm font-normal text-[#101211] shadow-sm"
+          suppressHydrationWarning
         />
       </label>
       <button

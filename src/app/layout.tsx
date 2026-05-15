@@ -39,6 +39,10 @@ export const metadata: Metadata = {
     description: "Apps, tools, and experiments by Ace.",
     images: ["/opengraph-image"],
   },
+  icons: {
+    icon: "/brand/ace-logo.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -50,8 +54,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
     >
-      <body className="min-h-full bg-[#f6f7f4] text-[#101211]">
+      <body className="min-h-full bg-[#f6f7f4] text-[#101211]" suppressHydrationWarning>
         <PageTracker />
         <SiteHeader />
         <main>{children}</main>

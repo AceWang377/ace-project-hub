@@ -1,6 +1,7 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { TrackedLink } from "@/components/tracked-link";
@@ -19,8 +20,15 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-[#101211]/10 bg-[#f6f7f4]/90 backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3 font-black tracking-[-0.02em]">
-          <span className="flex size-9 items-center justify-center rounded-[8px] bg-[#101211] text-[0.76rem] font-black text-white shadow-[inset_0_-3px_0_#00c7d4]">
-            ACE
+          <span className="flex size-10 items-center justify-center overflow-hidden rounded-[8px] border border-[#101211]/10 bg-white shadow-sm">
+            <Image
+              src="/brand/ace-logo.png"
+              alt="Ace logo"
+              width={40}
+              height={40}
+              className="scale-[1.42] object-cover"
+              priority
+            />
           </span>
           <span>Ace</span>
         </Link>

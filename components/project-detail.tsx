@@ -1,4 +1,5 @@
-import { ArrowRight, ExternalLink, FileText, ShieldCheck, Wrench } from "lucide-react";
+import { ArrowRight, ExternalLink, FileText, GitBranch, ShieldCheck, Wrench } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { ProjectMark } from "@/components/project-mark";
 import { TrackedLink } from "@/components/tracked-link";
@@ -39,6 +40,17 @@ export function ProjectDetail({ project }: { project: Project }) {
               >
                 Contact Ace
               </TrackedLink>
+              {project.links.github ? (
+                <TrackedLink
+                  href={project.links.github}
+                  eventName="project_secondary_cta_click"
+                  projectSlug={project.slug}
+                  className="inline-flex h-12 items-center gap-2 rounded-[8px] border border-white/20 px-5 text-sm font-black text-white transition hover:bg-white/10"
+                >
+                  GitHub
+                  <GitBranch size={16} />
+                </TrackedLink>
+              ) : null}
             </div>
           </div>
           <div className="motion-safe-float rounded-[8px] border border-white/14 bg-white/[0.06] p-5 shadow-[0_24px_80px_rgba(0,0,0,0.24)]">
@@ -76,6 +88,18 @@ export function ProjectDetail({ project }: { project: Project }) {
                   <Wrench size={15} />
                   Support
                 </Link>
+                {project.links.landing ? (
+                  <Link href={project.links.landing} className="inline-flex items-center gap-2">
+                    <ExternalLink size={15} />
+                    Project site
+                  </Link>
+                ) : null}
+                {project.links.github ? (
+                  <Link href={project.links.github} className="inline-flex items-center gap-2">
+                    <GitBranch size={15} />
+                    Source repo
+                  </Link>
+                ) : null}
               </div>
             </div>
           </div>
@@ -97,28 +121,51 @@ export function ProjectDetail({ project }: { project: Project }) {
           <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <p className="text-sm font-black uppercase tracking-[0.16em] text-[#6b736e]">Product preview</p>
-              <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] md:text-5xl">A clear page before the product expands.</h2>
+              <h2 className="mt-3 text-3xl font-black tracking-[-0.04em] md:text-5xl">Real product material, not placeholder framing.</h2>
             </div>
             <span className="max-w-sm text-sm leading-6 text-[#626a65]">
-              Screenshot and App Store media can be dropped into the project config later without changing this template.
+              Media comes from the current project folders and can be refreshed by editing the project config.
             </span>
           </div>
-          <div className="grid min-h-[340px] gap-4 rounded-[8px] border border-[#101211]/10 bg-[#f6f7f4] p-4 md:grid-cols-[1fr_0.7fr]">
-            <div className="grid-paper rounded-[8px] bg-[#101211] p-6 text-white">
-              <div className="flex items-center justify-between">
-                <ProjectMark label={project.brand.icon ?? project.name.slice(0, 2)} accent={accent} dark />
-                <span className="text-xs font-black uppercase tracking-[0.18em] text-white/40">Preview</span>
+          <div className="rounded-[8px] border border-[#101211]/10 bg-[#f6f7f4] p-4">
+            {project.media.screenshots?.length ? (
+              <div className="grid gap-4 md:grid-cols-3">
+                {project.media.screenshots.map((screenshot, index) => (
+                  <figure
+                    key={screenshot}
+                    className="overflow-hidden rounded-[8px] border border-[#101211]/10 bg-white shadow-[0_16px_40px_rgba(16,18,17,0.08)]"
+                  >
+                    <div className="relative aspect-[9/16] bg-[#101211]">
+                      <Image
+                        src={screenshot}
+                        alt={`${project.name} product screenshot ${index + 1}`}
+                        fill
+                        sizes="(min-width: 768px) 30vw, 90vw"
+                        className="object-cover"
+                      />
+                    </div>
+                  </figure>
+                ))}
               </div>
-              <h3 className="mt-16 max-w-xl text-4xl font-black tracking-[-0.05em]">{project.tagline}</h3>
-            </div>
-            <div className="grid gap-3">
-              {project.category.map((category) => (
-                <div key={category} className="rounded-[8px] border border-[#101211]/10 bg-white p-4">
-                  <p className="text-xs font-black uppercase tracking-[0.14em] text-[#7a827d]">Category</p>
-                  <p className="mt-2 text-lg font-black">{category}</p>
+            ) : (
+              <div className="grid min-h-[340px] gap-4 md:grid-cols-[1fr_0.7fr]">
+                <div className="grid-paper rounded-[8px] bg-[#101211] p-6 text-white">
+                  <div className="flex items-center justify-between">
+                    <ProjectMark label={project.brand.icon ?? project.name.slice(0, 2)} accent={accent} dark />
+                    <span className="text-xs font-black uppercase tracking-[0.18em] text-white/40">Preview</span>
+                  </div>
+                  <h3 className="mt-16 max-w-xl text-4xl font-black tracking-[-0.05em]">{project.tagline}</h3>
                 </div>
-              ))}
-            </div>
+                <div className="grid gap-3">
+                  {project.category.map((category) => (
+                    <div key={category} className="rounded-[8px] border border-[#101211]/10 bg-white p-4">
+                      <p className="text-xs font-black uppercase tracking-[0.14em] text-[#7a827d]">Category</p>
+                      <p className="mt-2 text-lg font-black">{category}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
