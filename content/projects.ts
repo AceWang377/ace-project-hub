@@ -59,6 +59,7 @@ const sharedProjects = {
     shortName: "SignalForge",
     status: "building",
     links: {
+      webApp: "https://acesignalforge.acezerotrading.com",
       github: "https://github.com/AceWang377/ace-signal-forge",
       waitlist: "/contact?project=acesignalforge",
       support: "/support/acesignalforge",
@@ -80,7 +81,7 @@ const sharedProjects = {
     name: "Blacktop",
     status: "unreviewed",
     links: {
-      landing: "https://acewang377.github.io/Blacktop-App/",
+      landing: "https://blacktop.acezerotrading.com",
       github: "https://github.com/AceWang377/Blacktop-App",
       waitlist: "/contact?project=blacktop",
       support: "/support/blacktop",
@@ -107,6 +108,7 @@ const sharedProjects = {
     shortName: "LastPercent",
     status: "unreviewed",
     links: {
+      landing: "https://lastpercent.acezerotrading.com",
       github: "https://github.com/AceWang377/LastPrecent",
       waitlist: "/contact?project=lastpercent",
       support: "/support/lastpercent",
@@ -132,7 +134,7 @@ const sharedProjects = {
     name: "AceStudio",
     status: "live",
     links: {
-      webApp: "https://ace-product-studio.vercel.app",
+      webApp: "https://studio.acezerotrading.com",
       github: "https://github.com/AceWang377/AceProductStudio",
       waitlist: "/contact?project=ace-studio",
       support: "/support/ace-studio",
