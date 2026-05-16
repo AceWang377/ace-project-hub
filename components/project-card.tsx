@@ -1,21 +1,26 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import { ProjectMark } from "@/components/project-mark";
 import { TrackedLink } from "@/components/tracked-link";
 import type { Project } from "@/content/projects";
-import { projectUrl, statusLabels } from "@/lib/projects";
+import type { Locale } from "@/i18n/routing";
+import { getStatusLabels, projectUrl } from "@/lib/projects";
 
 export function ProjectCard({ project, featured }: { project: Project; featured?: boolean }) {
   const accent = project.brand.accentColor ?? "#00c7d4";
+  const locale = useLocale() as Locale;
+  const t = useTranslations("ProjectCard");
+  const statusLabels = getStatusLabels(locale);
   const secondaryLink =
     project.links.webApp ?? project.links.appStore ?? project.links.landing ?? project.links.github;
   const secondaryLabel = project.links.webApp
-    ? "Open App"
+    ? t("openApp")
     : project.links.appStore
-      ? "App Store"
+      ? t("appStore")
       : project.links.landing
-        ? "Project Site"
+        ? t("projectSite")
         : project.links.github
-          ? "GitHub"
+          ? t("github")
           : "";
 
   return (
@@ -28,7 +33,7 @@ export function ProjectCard({ project, featured }: { project: Project; featured?
       <div className="absolute inset-x-0 top-0 h-1" style={{ backgroundColor: accent }} />
       <div>
         <div className="flex items-start justify-between gap-4">
-          <ProjectMark label={project.brand.icon ?? project.name.slice(0, 2)} accent={accent} />
+          <ProjectMark label={project.brand.icon ?? project.name.slice(0, 2)} image={project.brand.iconImage} accent={accent} />
           <span className="rounded-[8px] border border-[#101211]/10 px-2.5 py-1 text-xs font-black uppercase tracking-[0.12em] text-[#4f5854]">
             {statusLabels[project.status]}
           </span>
@@ -57,7 +62,7 @@ export function ProjectCard({ project, featured }: { project: Project; featured?
           projectSlug={project.slug}
           className="inline-flex h-10 items-center gap-2 rounded-[8px] bg-[#101211] px-4 text-sm font-bold text-white transition hover:bg-[#252b28]"
         >
-          View Project
+          {t("viewProject")}
           <ArrowRight size={16} />
         </TrackedLink>
         {secondaryLink ? (

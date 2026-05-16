@@ -1,25 +1,27 @@
 import type { Metadata } from "next";
+import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { ProjectDetail } from "@/components/project-detail";
 import { getProject, getProjectSlugs } from "@/lib/projects";
 
 export function generateStaticParams() {
-  return getProjectSlugs().map((slug) => ({ slug }));
+  return ["en", "zh"].flatMap((locale) => getProjectSlugs().map((slug) => ({ locale, slug })));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
-  const project = getProject(slug);
+  const { locale, slug } = await params;
+  const project = getProject(slug, locale);
 
   if (!project) {
     return { title: "Project not found" };
   }
 
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://acewang.top"),
     title: `${project.name} - ${project.tagline}`,
     description: project.description,
     openGraph: {
@@ -37,9 +39,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const project = getProject(slug);
+export default async function ProjectPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+  const project = getProject(slug, locale);
 
   if (!project) {
     notFound();

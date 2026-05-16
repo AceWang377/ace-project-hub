@@ -9,12 +9,12 @@ export const size = {
 export const contentType = "image/png";
 
 export function generateStaticParams() {
-  return getProjectSlugs().map((slug) => ({ slug }));
+  return ["en", "zh"].flatMap((locale) => getProjectSlugs().map((slug) => ({ locale, slug })));
 }
 
-export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const project = getProject(slug);
+export default async function Image({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  const project = getProject(slug, locale);
 
   return new ImageResponse(
     (

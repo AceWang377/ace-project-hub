@@ -1,0 +1,216 @@
+{
+  "Metadata": {
+    "siteTitle": "Ace - Apps, tools, and experiments",
+    "titleTemplate": "{title} | Ace Project Hub",
+    "description": "Ace Project Hub is the formal home for Ace's apps, tools, experiments, legal pages, and support links."
+  },
+  "Nav": {
+    "projects": "Projects",
+    "notes": "Notes",
+    "about": "About",
+    "contact": "Contact",
+    "viewProjects": "View Projects",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "english": "EN",
+    "chinese": "中文"
+  },
+  "Footer": {
+    "description": "A formal home for Ace's apps, tools, experiments, legal pages, and support links.",
+    "projects": "Projects",
+    "company": "Company",
+    "legal": "Legal",
+    "about": "About",
+    "contact": "Contact",
+    "support": "Support",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© 2026 Ace Zero Trading Ltd. All rights reserved."
+  },
+  "Home": {
+    "badge": "Currently building: AceSignalForge",
+    "title": "Building focused apps and tools for real workflows.",
+    "description": "I design and build small, practical products across productivity, AI workflows, creative tools, and mobile apps.",
+    "explore": "Explore Projects",
+    "contact": "Contact Ace",
+    "console": "Project console",
+    "legal": "Legal",
+    "support": "Support",
+    "seo": "SEO",
+    "featuredLabel": "Featured projects",
+    "featuredTitle": "One hub. Several product paths.",
+    "viewAll": "View all projects",
+    "principlesLabel": "Operating principles",
+    "principlesTitle": "Small ships, real signals.",
+    "principles": {
+      "ship": {
+        "title": "Ship small.",
+        "body": "Make each release narrow enough to understand."
+      },
+      "signals": {
+        "title": "Measure real signals.",
+        "body": "Watch user action, not vanity motion."
+      },
+      "feedback": {
+        "title": "Improve from feedback.",
+        "body": "Let launches teach the next build."
+      },
+      "focus": {
+        "title": "Keep products focused.",
+        "body": "A useful edge beats a crowded surface."
+      }
+    },
+    "notesLabel": "Latest notes",
+    "notesTitle": "Build log signals.",
+    "ctaTitle": "Interested in one of the projects?",
+    "ctaDescription": "Send feedback, request early access, or get updates when a project moves from build mode into public release."
+  },
+  "ProjectsPage": {
+    "metadataTitle": "Projects",
+    "metadataDescription": "Explore AceSignalForge, Blacktop, LastPercent, AceStudio, and future Ace projects.",
+    "label": "Projects",
+    "title": "Apps, tools, and experiments under one roof.",
+    "description": "Each project page carries its own status, CTA, privacy policy, terms, and support route. Adding a future project starts in one editable config file."
+  },
+  "ProjectCard": {
+    "viewProject": "View Project",
+    "openApp": "Open App",
+    "appStore": "App Store",
+    "projectSite": "Project Site",
+    "github": "GitHub"
+  },
+  "ProjectDetail": {
+    "projectStatus": "Project status",
+    "openApp": "Open App",
+    "viewAppStore": "View App Store",
+    "joinWaitlist": "Join Waitlist",
+    "contactAce": "Contact Ace",
+    "legalSupport": "Legal and support",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms",
+    "support": "Support",
+    "projectSite": "Project site",
+    "sourceRepo": "Source repo",
+    "problem": "Problem",
+    "productPreview": "Product preview",
+    "previewTitle": "Real product material, not placeholder framing.",
+    "previewDescription": "Media comes from the current project folders and can be refreshed by editing the project config.",
+    "preview": "Preview",
+    "category": "Category",
+    "whoFor": "Who it is for",
+    "features": "Key features",
+    "roadmap": "Roadmap",
+    "currentStatus": "Current status: {status}.",
+    "faqLabel": "FAQ",
+    "faqTitle": "Basic answers for users and reviewers.",
+    "faqLiveQ": "Is this project live?",
+    "faqLiveA": "Current status is {status}.",
+    "faqUsersQ": "Who is it for?",
+    "faqTryQ": "How do I try it?",
+    "faqTryPrimary": "Use the primary CTA above.",
+    "faqTryWaitlist": "Use the waitlist or contact form.",
+    "faqSupportQ": "Where is support?",
+    "faqSupportA": "Visit /support/{slug} or contact Ace.",
+    "faqPrivacyQ": "Where is the privacy policy?",
+    "faqPrivacyA": "Visit /legal/privacy/{slug}."
+  },
+  "About": {
+    "metadataTitle": "About Ace",
+    "metadataDescription": "About Ace, the creator behind Ace Project Hub.",
+    "label": "About",
+    "title": "A practical base for products that are still moving.",
+    "body1": "Ace Project Hub is the public identity layer for Ace's independent apps, web tools, mobile products, and experiments. It keeps product discovery, support, legal pages, and launch context in one maintainable place.",
+    "body2": "The style is intentionally direct: clear project pages, honest status labels, real screenshots, real project icons, editable copy, and no fake social proof. As projects mature, App Store links, changelogs, screenshots, and subdomains can be added from the project config.",
+    "explore": "Explore projects"
+  },
+  "Contact": {
+    "metadataTitle": "Contact",
+    "metadataDescription": "Contact Ace, send support questions, or request updates about Ace projects.",
+    "label": "Contact",
+    "title": "Send feedback or request early access.",
+    "description": "Use the contact form for support, collaboration, project feedback, or App Store review questions. Use the update form if you only want project launch notes.",
+    "contactAce": "Contact Ace",
+    "joinUpdates": "Join Updates"
+  },
+  "Forms": {
+    "email": "Email",
+    "name": "Name",
+    "optional": "Optional",
+    "project": "Project",
+    "general": "General",
+    "generalUpdates": "General updates",
+    "message": "Message",
+    "contactPlaceholder": "Tell Ace what you need.",
+    "waitlistPlaceholder": "Optional context or feedback",
+    "sending": "Sending...",
+    "sent": "Sent",
+    "sendMessage": "Send Message",
+    "submitted": "Submitted",
+    "joinUpdates": "Join Updates",
+    "contactError": "The message could not be sent.",
+    "contactSuccess": "Message received.",
+    "waitlistError": "The form could not be submitted.",
+    "waitlistSuccess": "You're on the update list."
+  },
+  "Support": {
+    "metadataTitle": "Support",
+    "metadataDescription": "Support links for Ace projects.",
+    "title": "Support",
+    "description": "Choose a project for support details, common issues, deletion requests, and contact paths.",
+    "label": "Support",
+    "projectTitle": "{name} support.",
+    "projectDescription": "For help, bug reports, App Store reviewer questions, or data deletion requests, contact Ace at {email}.",
+    "commonIssues": "Common issues",
+    "commonIssuesBody": "If something looks broken, include your device, browser or app version, and the steps to reproduce it.",
+    "bugReports": "Bug reports",
+    "bugReportsBody": "Send a concise message with screenshots if available. Avoid sharing sensitive data in plain text.",
+    "dataDeletion": "Data deletion",
+    "dataDeletionBody": "Email {email} with the project name and the email address used in the form.",
+    "appStore": "App Store link",
+    "appStoreAvailable": "Use the App Store CTA on the project page.",
+    "appStoreUnavailable": "The App Store link will be added when available.",
+    "contactSupport": "Contact support"
+  },
+  "Legal": {
+    "privacyTitle": "Privacy Policies",
+    "privacyDescription": "Project-specific privacy policy links for Ace Project Hub.",
+    "termsTitle": "Terms",
+    "termsDescription": "Project-specific terms links for Ace Project Hub.",
+    "lastUpdated": "Last updated {date}",
+    "privacyPolicyTitle": "{name} Privacy Policy",
+    "termsProjectTitle": "{name} Terms",
+    "privacy": {
+      "dataTitle": "What data is collected",
+      "dataBody": "This project page may collect your email, optional name, project interest, message content, source path, and submission timestamp when you use the contact or waitlist forms. The app itself may collect additional data only when that behavior is explicitly added to the live product.",
+      "useTitle": "How data is used",
+      "useBody": "Submitted information is used to reply to support requests, manage early-access interest, improve project communication, and understand which project pages are useful.",
+      "servicesTitle": "Third-party services",
+      "servicesBody": "Form submissions and optional site events are designed to be stored in Supabase. Hosting may run on Vercel or another deployment provider. App Store distribution may use Apple services when a mobile app is released.",
+      "analyticsTitle": "Analytics and tracking",
+      "analyticsBody": "The site can record lightweight events such as page views, project CTA clicks, contact submissions, and waitlist submissions. No advertising profile is created from this hub.",
+      "rightsTitle": "User rights and deletion requests",
+      "rightsBody": "You can request a copy or deletion of submitted information by emailing {email}.",
+      "changesTitle": "Changes",
+      "changesBody": "This policy may be updated as the project changes. The last updated date above will change when material updates are made."
+    },
+    "terms": {
+      "useTitle": "Use of the project",
+      "useBody": "{name} is provided as described on its project page and may change as the product develops. Do not use it for unlawful, abusive, or harmful activity.",
+      "availabilityTitle": "Availability",
+      "availabilityBody": "Some projects are still in build, review, or beta status. Features, links, and availability can change without notice.",
+      "feedbackTitle": "Content and feedback",
+      "feedbackBody": "If you send feedback, support questions, or waitlist messages, Ace may use that information to improve the product and reply to you.",
+      "warrantyTitle": "No warranty",
+      "warrantyBody": "The project is provided without warranties. Ace is not responsible for indirect losses, service interruption, or third-party platform behavior.",
+      "contactTitle": "Contact",
+      "contactBody": "Questions about these terms can be sent to {email}."
+    }
+  },
+  "Notes": {
+    "metadataTitle": "Notes",
+    "metadataDescription": "Build notes and project updates from Ace Project Hub.",
+    "label": "Notes",
+    "title": "Build notes and release signals."
+  }
+}

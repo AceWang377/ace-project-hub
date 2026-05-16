@@ -1,13 +1,18 @@
 "use client";
 
 import { Check, Send } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 import { FormEvent, useState } from "react";
-import { projects } from "@/content/projects";
+import type { Locale } from "@/i18n/routing";
 import { trackEvent } from "@/lib/analytics";
+import { getProjects } from "@/lib/projects";
 
 export function ContactForm({ defaultProject }: { defaultProject?: string }) {
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const locale = useLocale() as Locale;
+  const t = useTranslations("Forms");
+  const projects = getProjects(locale);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -29,7 +34,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
     const result = (await response.json()) as { message?: string };
     if (!response.ok) {
       setState("error");
-      setMessage(result.message ?? "The message could not be sent.");
+      setMessage(result.message ?? t("contactError"));
       return;
     }
 
@@ -39,7 +44,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
     });
     form.reset();
     setState("success");
-    setMessage(result.message ?? "Message received.");
+    setMessage(result.message ?? t("contactSuccess"));
   }
 
   return (
@@ -47,7 +52,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
       <input className="hidden" name="company" tabIndex={-1} autoComplete="off" suppressHydrationWarning />
       <div className="grid gap-2 sm:grid-cols-2">
         <label className="grid gap-2 text-sm font-bold text-[#202522]">
-          Email
+          {t("email")}
           <input
             name="email"
             type="email"
@@ -58,24 +63,24 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
           />
         </label>
         <label className="grid gap-2 text-sm font-bold text-[#202522]">
-          Name
+          {t("name")}
           <input
             name="name"
-            placeholder="Optional"
+            placeholder={t("optional")}
             className="h-12 rounded-[8px] border border-[#101211]/15 bg-white px-3 text-sm font-normal text-[#101211] shadow-sm"
             suppressHydrationWarning
           />
         </label>
       </div>
       <label className="grid gap-2 text-sm font-bold text-[#202522]">
-        Project
+        {t("project")}
         <select
           name="project_slug"
           defaultValue={defaultProject ?? ""}
           className="h-12 rounded-[8px] border border-[#101211]/15 bg-white px-3 text-sm font-normal text-[#101211] shadow-sm"
           suppressHydrationWarning
         >
-          <option value="">General</option>
+          <option value="">{t("general")}</option>
           {projects.map((project) => (
             <option key={project.slug} value={project.slug}>
               {project.name}
@@ -84,12 +89,12 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
         </select>
       </label>
       <label className="grid gap-2 text-sm font-bold text-[#202522]">
-        Message
+        {t("message")}
         <textarea
           name="message"
           rows={6}
           required
-          placeholder="Tell Ace what you need."
+          placeholder={t("contactPlaceholder")}
           className="resize-none rounded-[8px] border border-[#101211]/15 bg-white px-3 py-3 text-sm font-normal text-[#101211] shadow-sm"
           suppressHydrationWarning
         />
@@ -100,7 +105,7 @@ export function ContactForm({ defaultProject }: { defaultProject?: string }) {
         className="inline-flex h-12 items-center justify-center gap-2 rounded-[8px] bg-[#101211] px-5 text-sm font-black text-white transition hover:bg-[#262c29] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {state === "success" ? <Check size={16} /> : <Send size={16} />}
-        {state === "loading" ? "Sending..." : state === "success" ? "Sent" : "Send Message"}
+        {state === "loading" ? t("sending") : state === "success" ? t("sent") : t("sendMessage")}
       </button>
       {message ? (
         <p

@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Ace Project Hub",
   creator: "Ace",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://maindomain.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://acewang.top",
   description:
     "The formal home for Ace's apps, tools, experiments, legal pages, and support links.",
   supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? "support@example.com",

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { projects } from "@/content/projects";
+import { routing } from "@/i18n/routing";
 import { absoluteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -21,10 +22,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     `/support/${project.slug}`,
   ]);
 
-  return [...staticRoutes, ...projectRoutes].map((route) => ({
-    url: absoluteUrl(route || "/"),
-    lastModified: new Date("2026-05-15"),
-    changeFrequency: route.includes("/legal/") ? "monthly" : "weekly",
-    priority: route === "" ? 1 : route === "/projects" ? 0.9 : 0.7,
-  }));
+  const routes = [...staticRoutes, ...projectRoutes];
+
+  return routes.flatMap((route) =>
+    routing.locales.map((locale) => {
+      const localizedRoute = locale === routing.defaultLocale ? route || "/" : `/zh${route || ""}`;
+
+      return {
+        url: absoluteUrl(localizedRoute),
+        lastModified: new Date("2026-05-16"),
+        changeFrequency: route.includes("/legal/") ? "monthly" : "weekly",
+        priority: route === "" ? 1 : route === "/projects" ? 0.9 : 0.7,
+      } satisfies MetadataRoute.Sitemap[number];
+    }),
+  );
 }
