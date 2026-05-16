@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://acewang.top"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://hub.acezerotrading.com"),
   icons: {
     icon: [
       { url: "/icon.png", sizes: "96x96", type: "image/png" },

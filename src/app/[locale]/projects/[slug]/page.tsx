@@ -21,7 +21,7 @@ export async function generateMetadata({
   }
 
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://acewang.top"),
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://hub.acezerotrading.com"),
     title: `${project.name} - ${project.tagline}`,
     description: project.description,
     openGraph: {
