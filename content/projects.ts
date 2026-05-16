@@ -81,7 +81,6 @@ const sharedProjects = {
     name: "Blacktop",
     status: "unreviewed",
     links: {
-      landing: "https://blacktop.acezerotrading.com",
       github: "https://github.com/AceWang377/Blacktop-App",
       waitlist: "/contact?project=blacktop",
       support: "/support/blacktop",
@@ -108,7 +107,6 @@ const sharedProjects = {
     shortName: "LastPercent",
     status: "unreviewed",
     links: {
-      landing: "https://lastpercent.acezerotrading.com",
       github: "https://github.com/AceWang377/LastPrecent",
       waitlist: "/contact?project=lastpercent",
       support: "/support/lastpercent",
