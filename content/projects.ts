@@ -134,7 +134,7 @@ const sharedProjects = {
     name: "AceStudio",
     status: "live",
     links: {
-      webApp: "https://studio.acezerotrading.com",
+      webApp: "https://acezerotrading.com",
       github: "https://github.com/AceWang377/AceProductStudio",
       waitlist: "/contact?project=ace-studio",
       support: "/support/ace-studio",
