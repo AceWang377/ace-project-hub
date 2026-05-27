@@ -29,7 +29,7 @@
     "copyright": "© 2026 ACE ZERP TRADING LTD. All rights reserved."
   },
   "Home": {
-    "badge": "当前构建：AceSignalForge",
+    "badge": "当前重点：已上线 iOS App",
     "title": "为真实工作流打造聚焦的 App 和工具。",
     "description": "我设计并构建小而实用的产品，覆盖效率、AI 工作流、创意工具和移动应用。",
     "explore": "浏览项目",
@@ -68,7 +68,7 @@
   },
   "ProjectsPage": {
     "metadataTitle": "项目",
-    "metadataDescription": "浏览 AceSignalForge、Blacktop、LastPercent、AceStudio 和未来的 Ace 项目。",
+    "metadataDescription": "浏览 Blacktop、LastPercent、AceStudio 和未来的 Ace 项目。",
     "label": "项目",
     "title": "App、工具和实验项目，统一放在一个屋檐下。",
     "description": "每个项目页都有自己的状态、CTA、隐私政策、条款和支持入口。未来新增项目从一个可编辑配置文件开始。"

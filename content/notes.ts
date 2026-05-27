@@ -9,11 +9,6 @@ export type Note = {
 export const localizedNotes: Record<Locale, Note[]> = {
   en: [
     {
-      title: "AceSignalForge PRD completed",
-      date: "2026-05-15",
-      summary: "The growth-console workflow is moving from concept into product structure.",
-    },
-    {
       title: "Blacktop and Last Percent are live",
       date: "2026-05-27",
       summary: "Both iOS apps are now published on the App Store, with hub pages updated to point users to the live releases.",
@@ -25,11 +20,6 @@ export const localizedNotes: Record<Locale, Note[]> = {
     },
   ],
   zh: [
-    {
-      title: "AceSignalForge PRD 已完成",
-      date: "2026-05-15",
-      summary: "增长控制台从概念进入产品结构阶段，开始承载真实发布工作流。",
-    },
     {
       title: "Blacktop 和 Last Percent 已上线",
       date: "2026-05-27",

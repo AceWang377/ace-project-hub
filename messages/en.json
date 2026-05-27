@@ -29,7 +29,7 @@
     "copyright": "© 2026 ACE ZERP TRADING LTD. All rights reserved."
   },
   "Home": {
-    "badge": "Currently building: AceSignalForge",
+    "badge": "Current focus: published iOS apps",
     "title": "Building focused apps and tools for real workflows.",
     "description": "I design and build small, practical products across productivity, AI workflows, creative tools, and mobile apps.",
     "explore": "Explore Projects",
@@ -68,7 +68,7 @@
   },
   "ProjectsPage": {
     "metadataTitle": "Projects",
-    "metadataDescription": "Explore AceSignalForge, Blacktop, LastPercent, AceStudio, and future Ace projects.",
+    "metadataDescription": "Explore Blacktop, LastPercent, AceStudio, and future Ace projects.",
     "label": "Projects",
     "title": "Apps, tools, and experiments under one roof.",
     "description": "Each project page carries its own status, CTA, privacy policy, terms, and support route. Adding a future project starts in one editable config file."

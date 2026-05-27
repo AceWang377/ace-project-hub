@@ -53,29 +53,6 @@ export type Project = {
 };
 
 const sharedProjects = {
-  acesignalforge: {
-    slug: "acesignalforge",
-    name: "AceSignalForge",
-    shortName: "SignalForge",
-    status: "building",
-    links: {
-      webApp: "https://acesignalforge.acezerotrading.com",
-      github: "https://github.com/AceWang377/ace-signal-forge",
-      waitlist: "/contact?project=acesignalforge",
-      support: "/support/acesignalforge",
-      privacy: "/legal/privacy/acesignalforge",
-      terms: "/legal/terms/acesignalforge",
-    },
-    brand: {
-      icon: "ASF",
-      iconImage: "/projects/acesignalforge/icon.png",
-      accentColor: "#00c7d4",
-      theme: "dark",
-    },
-    media: {
-      screenshots: ["/projects/acesignalforge/logo.png"],
-    },
-  },
   blacktop: {
     slug: "blacktop",
     name: "Blacktop",
@@ -158,67 +135,6 @@ const sharedProjects = {
 
 export const localizedProjects: Record<Locale, Project[]> = {
   en: [
-    {
-      ...sharedProjects.acesignalforge,
-      tagline: "AI growth console for indie app marketing.",
-      description:
-        "AceSignalForge is a private AI growth console for indie app launches. It turns product profiles, personas, pain points, and launch notes into scored content ideas, multi-platform copy packages, asset requirements, publishing queues, metrics, weekly reviews, and integration planning.",
-      category: ["AI", "Marketing", "Indie Apps"],
-      targetUsers: [
-        "Indie iOS app developers",
-        "Solo builders launching small products",
-        "Creators who need repeatable growth experiments",
-        "Developers tracking App Store signals and content results",
-      ],
-      problem:
-        "Indie app builders can ship products faster than they can explain, test, and review growth messages across platforms.",
-      solution:
-        "AceSignalForge turns launch context into a repeatable loop: profile the app, create ideas, package content, plan assets, queue publishing, record metrics, and review the week.",
-      features: [
-        {
-          title: "App profile to ideas",
-          description:
-            "Capture positioning, personas, launch status, and pain points, then generate scored content ideas with rationale.",
-        },
-        {
-          title: "Multi-platform copy packages",
-          description:
-            "Draft X, Threads, LinkedIn, Reddit, Product Hunt, and short-video scripts from one approved angle.",
-        },
-        {
-          title: "Asset requirements",
-          description:
-            "Plan screenshots, short demos, cover text, shot lists, and creative requirements before production starts.",
-        },
-        {
-          title: "Publishing queue",
-          description:
-            "Keep manual-first publishing organized with approval states, platform-fit checks, and publish-attempt records.",
-        },
-        {
-          title: "Weekly review loop",
-          description:
-            "Record results and use AI review to decide which messages, channels, and assets should change next.",
-        },
-      ],
-      roadmap: [
-        {
-          label: "Done",
-          description: "Built the core Next.js/Supabase console structure and mock AI fallback flow.",
-          status: "done",
-        },
-        {
-          label: "Now",
-          description: "Using it privately to plan launch experiments for Ace's iOS apps.",
-          status: "current",
-        },
-        {
-          label: "Next",
-          description: "Add real integrations only after the manual operating loop proves useful.",
-          status: "planned",
-        },
-      ],
-    },
     {
       ...sharedProjects.blacktop,
       tagline: "Court facts, not ratings.",
@@ -397,62 +313,6 @@ export const localizedProjects: Record<Locale, Project[]> = {
     },
   ],
   zh: [
-    {
-      ...sharedProjects.acesignalforge,
-      tagline: "面向独立 App 增长的 AI 内容控制台。",
-      description:
-        "AceSignalForge 是一个私有的独立 App 增长控制台。它把产品定位、用户画像、痛点和发布状态转成可评分的内容创意、多平台文案包、素材需求、发布队列、指标记录、周复盘和集成规划。",
-      category: ["AI", "增长营销", "独立 App"],
-      targetUsers: [
-        "正在发布 iOS App 的独立开发者",
-        "一个人推进小产品上线的 builder",
-        "需要可重复增长实验流程的创作者",
-        "想追踪 App Store 信号和内容效果的开发者",
-      ],
-      problem:
-        "独立开发者往往能更快把产品做出来，却很难持续讲清楚产品、测试不同渠道信息，并复盘哪些增长动作有效。",
-      solution:
-        "AceSignalForge 把发布上下文变成一条可重复流程：完善产品档案、生成创意、打包内容、规划素材、排发布队列、记录指标、做周复盘。",
-      features: [
-        {
-          title: "产品档案生成创意",
-          description: "记录定位、用户画像、发布阶段和痛点，再生成带理由的可评分内容创意。",
-        },
-        {
-          title: "多平台文案包",
-          description: "从一个确认过的角度生成 X、Threads、LinkedIn、Reddit、Product Hunt 和短视频脚本。",
-        },
-        {
-          title: "素材需求规划",
-          description: "在制作前先规划截图、短 demo、封面文案、镜头清单和创意要求。",
-        },
-        {
-          title: "发布队列",
-          description: "用审批状态、平台适配检查和发布尝试记录，把手动发布流程变得有序。",
-        },
-        {
-          title: "周复盘闭环",
-          description: "记录结果，用 AI 复盘判断下一轮应该调整信息、渠道还是素材。",
-        },
-      ],
-      roadmap: [
-        {
-          label: "已完成",
-          description: "完成 Next.js/Supabase 控制台主体结构和 mock AI fallback 流程。",
-          status: "done",
-        },
-        {
-          label: "现在",
-          description: "作为 Ace 自己 iOS App 发布实验的私有工作流使用。",
-          status: "current",
-        },
-        {
-          label: "下一步",
-          description: "先验证手动流程真的有用，再接入真实平台集成。",
-          status: "planned",
-        },
-      ],
-    },
     {
       ...sharedProjects.blacktop,
       tagline: "看球场事实，不看评分噪音。",
