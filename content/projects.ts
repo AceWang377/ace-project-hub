@@ -79,8 +79,9 @@ const sharedProjects = {
   blacktop: {
     slug: "blacktop",
     name: "Blacktop",
-    status: "unreviewed",
+    status: "live",
     links: {
+      appStore: "https://apps.apple.com/gb/app/blacktop-basketball/id6769562571",
       github: "https://github.com/AceWang377/Blacktop-App",
       waitlist: "/contact?project=blacktop",
       support: "/support/blacktop",
@@ -105,8 +106,9 @@ const sharedProjects = {
     slug: "lastpercent",
     name: "Last Percent",
     shortName: "LastPercent",
-    status: "unreviewed",
+    status: "live",
     links: {
+      appStore: "https://apps.apple.com/gb/app/last-percent/id6767645446",
       github: "https://github.com/AceWang377/LastPrecent",
       waitlist: "/contact?project=lastpercent",
       support: "/support/lastpercent",
@@ -221,7 +223,7 @@ export const localizedProjects: Record<Locale, Project[]> = {
       ...sharedProjects.blacktop,
       tagline: "Court facts, not ratings.",
       description:
-        "Blacktop is a SwiftUI iOS app for finding basketball courts by practical playability facts. It starts with Sheffield, uses a clean MapKit court map, and helps players decide before they leave: indoor or outdoor, free or paid, lights, surface, rain impact, nets, rim height, facilities, access notes, and data confidence.",
+        "Blacktop Basketball is a published SwiftUI iOS app for finding basketball courts by practical playability facts. The public App Store build is 1.2.0, starting from Sheffield with a clean MapKit court map that helps players decide before they leave: indoor or outdoor, free or paid, lights, surface, rain impact, nets, rim height, facilities, access notes, and data confidence.",
       category: ["Sports", "Navigation", "iOS"],
       targetUsers: [
         "Basketball players checking courts before a run",
@@ -249,8 +251,8 @@ export const localizedProjects: Record<Locale, Project[]> = {
             "Open details such as surface, rain impact, rim type, cleanliness, facilities, and access notes.",
         },
         {
-          title: "Local saves",
-          description: "Save courts on device without an account, backend profile, or social feed.",
+          title: "Saved courts and directions",
+          description: "Keep useful courts close and open Apple Maps directions without turning discovery into a social feed.",
         },
         {
           title: "Data transparency",
@@ -260,17 +262,19 @@ export const localizedProjects: Record<Locale, Project[]> = {
       roadmap: [
         {
           label: "Done",
-          description: "Prepared App Store metadata, screenshots, privacy, support, and terms pages.",
+          description: "Published Blacktop Basketball on the App Store; the current public build is 1.2.0.",
           status: "done",
         },
         {
           label: "Now",
-          description: "Blacktop is unreviewed and waiting in the Apple App Store review flow.",
+          description:
+            "Improving the V2 contribution direction: Sign in with Apple only where needed, vote-backed labels, better search, and stronger court data quality.",
           status: "current",
         },
         {
           label: "Next",
-          description: "Add the App Store link after approval and continue improving court coverage.",
+          description:
+            "Use App Store feedback and real court coverage needs to expand the map without turning it into a noisy social app.",
           status: "planned",
         },
       ],
@@ -279,7 +283,7 @@ export const localizedProjects: Record<Locale, Project[]> = {
       ...sharedProjects.lastpercent,
       tagline: "One quest before your phone dies.",
       description:
-        "Last Percent is a no-backend iOS MVP that gives users one tiny real-world mission when their phone battery reaches a chosen low-battery unlock point. It is intentionally minimal, black-and-white, no-login, no-feed, and not an app blocker.",
+        "Last Percent is a published no-backend iOS app that gives users one tiny real-world mission when their phone battery reaches a chosen low-battery unlock point. The public App Store build is 1.1.0. It is intentionally minimal, black-and-white, no-login, no-feed, and not an app blocker.",
       category: ["Mobile App", "iOS", "Digital Minimalism"],
       targetUsers: [
         "People trying to interrupt doomscrolling",
@@ -292,6 +296,10 @@ export const localizedProjects: Record<Locale, Project[]> = {
       solution:
         "Last Percent uses the low-battery state as a light ritual: one real-world quest, local history, optional daily reminders, and no backend.",
       features: [
+        {
+          title: "Published App Store app",
+          description: "Live on the App Store as a small, focused iOS utility under ACE ZERO TRADING LTD.",
+        },
         {
           title: "Battery unlock point",
           description:
@@ -309,25 +317,23 @@ export const localizedProjects: Record<Locale, Project[]> = {
           title: "Optional check-ins",
           description: "Daily reminders invite users back without pretending to monitor battery in the background.",
         },
-        {
-          title: "Minimal tone",
-          description: "Black-and-white interface with a calm, slightly absurd utility-app feeling.",
-        },
       ],
       roadmap: [
         {
           label: "Done",
-          description: "Built the SwiftUI no-backend MVP, local data model, screenshots, and review notes.",
+          description: "Published Last Percent on the App Store; the current public build is 1.1.0.",
           status: "done",
         },
         {
           label: "Now",
-          description: "Preparing public-facing support, privacy, screenshots, and launch positioning.",
+          description:
+            "Planning the V1.2 onboarding, share card, and clearer task-versus-quest wording after the first public release.",
           status: "current",
         },
         {
           label: "Next",
-          description: "Use real user feedback to decide whether to add more quests or stronger reminder flows.",
+          description:
+            "Ship V1.2 with a stronger first-time explanation and shareable completion moments while keeping the app no-backend.",
           status: "planned",
         },
       ],
@@ -451,7 +457,7 @@ export const localizedProjects: Record<Locale, Project[]> = {
       ...sharedProjects.blacktop,
       tagline: "看球场事实，不看评分噪音。",
       description:
-        "Blacktop 是一个 SwiftUI iOS App，用实用的可打球信息帮助用户找篮球场。它从 Sheffield 开始，使用清爽的 MapKit 球场地图，让你出门前就知道室内/室外、免费/付费、灯光、地面、雨后影响、篮网、篮筐高度、设施、入口说明和数据可信度。",
+        "Blacktop Basketball 是一个已经在 App Store 上架的 SwiftUI iOS App，用实用的可打球信息帮助用户找篮球场。当前公开版本是 1.2.0，从 Sheffield 开始，使用清爽的 MapKit 球场地图，让你出门前就知道室内/室外、免费/付费、灯光、地面、雨后影响、篮网、篮筐高度、设施、入口说明和数据可信度。",
       category: ["运动", "地图导航", "iOS"],
       targetUsers: [
         "出门打球前想确认球场情况的篮球玩家",
@@ -477,8 +483,8 @@ export const localizedProjects: Record<Locale, Project[]> = {
           description: "查看地面、雨后影响、篮筐类型、整洁度、设施和入口说明等实用细节。",
         },
         {
-          title: "本地收藏",
-          description: "无需账号、后端资料或社交动态，直接在设备本地收藏球场。",
+          title: "收藏和导航",
+          description: "保留有用球场，并打开 Apple Maps 导航，但不把找球场变成社交动态。",
         },
         {
           title: "数据透明",
@@ -488,17 +494,18 @@ export const localizedProjects: Record<Locale, Project[]> = {
       roadmap: [
         {
           label: "已完成",
-          description: "准备好 App Store 元数据、截图、隐私、支持和条款页面。",
+          description: "Blacktop Basketball 已经在 App Store 上架，当前公开版本是 1.2.0。",
           status: "done",
         },
         {
           label: "现在",
-          description: "Blacktop 仍处于 Apple App Store 审核队列，当前尚未通过审核。",
+          description:
+            "继续打磨 V2 的用户贡献方向：只在需要提交信息时使用 Sign in with Apple、投票支持的标签、更好的搜索和更可靠的球场数据。",
           status: "current",
         },
         {
           label: "下一步",
-          description: "审核通过后补充 App Store 链接，并持续完善球场覆盖。",
+          description: "根据 App Store 反馈和真实球场覆盖需求扩展地图，同时避免把产品做成嘈杂的社交 App。",
           status: "planned",
         },
       ],
@@ -507,7 +514,7 @@ export const localizedProjects: Record<Locale, Project[]> = {
       ...sharedProjects.lastpercent,
       tagline: "手机没电前，先完成一个小任务。",
       description:
-        "Last Percent 是一个无后端 iOS MVP。当手机电量到达用户设定的低电量解锁点时，它给用户一个很小的现实世界任务。产品刻意保持极简、黑白、无登录、无信息流，也不是 App blocker。",
+        "Last Percent 是一个已经在 App Store 上架的无后端 iOS App。当手机电量到达用户设定的低电量解锁点时，它给用户一个很小的现实世界任务。当前公开版本是 1.1.0。产品刻意保持极简、黑白、无登录、无信息流，也不是 App blocker。",
       category: ["移动 App", "iOS", "数字极简"],
       targetUsers: [
         "想打断 doomscrolling 的用户",
@@ -520,6 +527,10 @@ export const localizedProjects: Record<Locale, Project[]> = {
       solution:
         "Last Percent 把低电量变成一个轻仪式：一个现实任务、本地历史、可选日提醒，并且没有后端。",
       features: [
+        {
+          title: "已上架 App Store",
+          description: "作为 ACE ZERO TRADING LTD 旗下小而专注的 iOS 工具，已经公开发布。",
+        },
         {
           title: "电量解锁点",
           description: "选择任务解锁的电量百分比，同时避免承诺 iOS 后台无法保证的电量触发。",
@@ -536,25 +547,21 @@ export const localizedProjects: Record<Locale, Project[]> = {
           title: "可选提醒",
           description: "日提醒把用户带回 App，但不假装能在后台持续监控电量。",
         },
-        {
-          title: "极简语气",
-          description: "黑白界面，安静、稍微荒诞，但仍然像一个真正有用的小工具。",
-        },
       ],
       roadmap: [
         {
           label: "已完成",
-          description: "完成 SwiftUI 无后端 MVP、本地数据模型、截图和审核说明。",
+          description: "Last Percent 已经在 App Store 上架，当前公开版本是 1.1.0。",
           status: "done",
         },
         {
           label: "现在",
-          description: "整理公开支持、隐私、截图和发布定位内容。",
+          description: "基于首次公开发布，规划 V1.2 的 onboarding、分享卡片，以及更清楚的 task/quest 表达。",
           status: "current",
         },
         {
           label: "下一步",
-          description: "根据真实用户反馈决定是否增加更多任务或更强的提醒流程。",
+          description: "发布 V1.2，让首次使用解释更清楚，完成任务后更容易分享，同时继续保持无后端。",
           status: "planned",
         },
       ],

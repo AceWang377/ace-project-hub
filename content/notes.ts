@@ -14,9 +14,9 @@ export const localizedNotes: Record<Locale, Note[]> = {
       summary: "The growth-console workflow is moving from concept into product structure.",
     },
     {
-      title: "Two iOS apps prepared for review",
-      date: "2026-05-15",
-      summary: "Blacktop and LastPercent now have formal public pages for reviewer support.",
+      title: "Blacktop and Last Percent are live",
+      date: "2026-05-27",
+      summary: "Both iOS apps are now published on the App Store, with hub pages updated to point users to the live releases.",
     },
     {
       title: "Main project hub in progress",
@@ -31,9 +31,9 @@ export const localizedNotes: Record<Locale, Note[]> = {
       summary: "增长控制台从概念进入产品结构阶段，开始承载真实发布工作流。",
     },
     {
-      title: "两个 iOS App 已准备审核资料",
-      date: "2026-05-15",
-      summary: "Blacktop 和 Last Percent 已拥有面向审核人员和用户的公开支持页面。",
+      title: "Blacktop 和 Last Percent 已上线",
+      date: "2026-05-27",
+      summary: "两个 iOS App 都已经在 App Store 发布，Hub 页面已更新为指向真实上线版本。",
     },
     {
       title: "主项目 Hub 正在完善",
