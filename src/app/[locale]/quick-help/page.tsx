@@ -39,6 +39,10 @@ const proof = [
   "Worked on industrial data pipelines with Node-RED, MQTT, QuestDB, and Grafana",
 ];
 
+const contactEmail = "acewang377@gmail.com";
+const contactSubject = "GBP 10 Quick Tech Help";
+const mailtoHref = `mailto:${contactEmail}?subject=${encodeURIComponent(contactSubject)}`;
+
 export default async function QuickHelpPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -56,21 +60,21 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
               Send one small AI, backend, iOS, data, spreadsheet, app, or website question. I will return a clear fix note, tidy-up, or next-step checklist.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
+              <a
+                href={mailtoHref}
+                className="inline-flex h-12 items-center gap-2 rounded-[8px] bg-white px-5 text-sm font-black text-[#101211] transition hover:bg-[#eafbfd]"
+              >
+                Email the task
+                <Mail size={16} />
+              </a>
               <TrackedLink
                 href="/contact?project=GBP%2010%20Quick%20Tech%20Help"
                 eventName="quick_help_contact_click"
-                className="inline-flex h-12 items-center gap-2 rounded-[8px] bg-white px-5 text-sm font-black text-[#101211] transition hover:bg-[#eafbfd]"
-              >
-                Send a task
-                <ArrowRight size={16} />
-              </TrackedLink>
-              <a
-                href="mailto:admin@acezerotrading.com?subject=GBP%2010%20Quick%20Tech%20Help"
                 className="inline-flex h-12 items-center gap-2 rounded-[8px] border border-white/20 px-5 text-sm font-black text-white transition hover:bg-white/10"
               >
-                Email Ace
-                <Mail size={16} />
-              </a>
+                Contact form
+                <ArrowRight size={16} />
+              </TrackedLink>
             </div>
           </div>
           <div className="min-w-0 max-w-full overflow-hidden rounded-[8px] border border-white/14 bg-white/[0.06] p-4 shadow-[0_24px_80px_rgba(0,0,0,0.24)]">
@@ -91,6 +95,20 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
                   <p className="mt-2 flex flex-wrap items-center gap-2 text-xl font-black tracking-[-0.03em]">
                     <Clock size={18} className="text-[#00a5b0]" />
                     Today or within 24 hours
+                  </p>
+                </div>
+                <div>
+                  <p className="text-sm font-black uppercase tracking-[0.14em] text-[#68716b]">
+                    Direct contact
+                  </p>
+                  <a
+                    href={mailtoHref}
+                    className="mt-2 block break-words text-xl font-black tracking-[-0.03em] text-[#101211] transition hover:text-[#007e87]"
+                  >
+                    {contactEmail}
+                  </a>
+                  <p className="mt-1 text-sm font-semibold text-[#626b65]">
+                    Subject: {contactSubject}
                   </p>
                 </div>
                 <div className="rounded-[8px] border border-[#101211]/10 bg-white p-4">
@@ -152,14 +170,23 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
           <p className="mt-5 max-w-2xl text-base leading-7 text-white/62">
             Please avoid passwords, bank details, private account access, identity documents, or confidential client data. Describe the problem and include screenshots or non-sensitive snippets if useful.
           </p>
-          <TrackedLink
-            href="/contact?project=GBP%2010%20Quick%20Tech%20Help"
-            eventName="quick_help_bottom_contact_click"
-            className="mt-8 inline-flex h-12 items-center gap-2 rounded-[8px] bg-white px-5 text-sm font-black text-[#101211] transition hover:bg-[#eafbfd]"
-          >
-            Start a GBP 10 task
-            <ArrowRight size={16} />
-          </TrackedLink>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a
+              href={mailtoHref}
+              className="inline-flex h-12 items-center gap-2 rounded-[8px] bg-white px-5 text-sm font-black text-[#101211] transition hover:bg-[#eafbfd]"
+            >
+              Email a GBP 10 task
+              <Mail size={16} />
+            </a>
+            <TrackedLink
+              href="/contact?project=GBP%2010%20Quick%20Tech%20Help"
+              eventName="quick_help_bottom_contact_click"
+              className="inline-flex h-12 items-center gap-2 rounded-[8px] border border-white/18 px-5 text-sm font-black text-white transition hover:bg-white/10"
+            >
+              Use contact form
+              <ArrowRight size={16} />
+            </TrackedLink>
+          </div>
         </div>
       </section>
     </main>
