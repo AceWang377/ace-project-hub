@@ -141,6 +141,7 @@
     "project": "Project",
     "general": "General",
     "generalUpdates": "General updates",
+    "quickHelp": "GBP 10 Quick Tech Help",
     "message": "Message",
     "contactPlaceholder": "Tell Ace what you need.",
     "waitlistPlaceholder": "Optional context or feedback",
@@ -150,6 +151,8 @@
     "submitted": "Submitted",
     "joinUpdates": "Join Updates",
     "contactError": "The message could not be sent.",
+    "contactFallback": "The form did not send. Email Ace directly with the saved message instead.",
+    "emailDirectly": "Email directly",
     "contactSuccess": "Message received.",
     "waitlistError": "The form could not be submitted.",
     "waitlistSuccess": "You're on the update list."

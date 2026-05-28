@@ -141,6 +141,7 @@
     "project": "项目",
     "general": "通用",
     "generalUpdates": "通用更新",
+    "quickHelp": "GBP 10 快速技术帮助",
     "message": "消息",
     "contactPlaceholder": "告诉 Ace 你需要什么。",
     "waitlistPlaceholder": "可选：补充背景或反馈",
@@ -150,6 +151,8 @@
     "submitted": "已提交",
     "joinUpdates": "加入更新",
     "contactError": "消息暂时无法发送。",
+    "contactFallback": "表单暂时未能发送。请改用邮件直接联系 Ace，邮件会保留你填写的内容。",
+    "emailDirectly": "直接发邮件",
     "contactSuccess": "消息已收到。",
     "waitlistError": "表单暂时无法提交。",
     "waitlistSuccess": "你已加入更新列表。"

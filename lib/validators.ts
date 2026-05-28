@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { getProjectSlugs } from "@/lib/projects";
 
-const projectSlugs = getProjectSlugs();
+const projectSlugs = [...getProjectSlugs(), "quick-help"];
 
 export const waitlistSchema = z.object({
   email: z.email("Enter a valid email address."),

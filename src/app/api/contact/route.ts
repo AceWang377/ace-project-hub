@@ -21,8 +21,7 @@ export async function POST(request: Request) {
   if (!supabase) {
     return NextResponse.json(
       {
-        message:
-          "Supabase is not configured yet. Add SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY to enable contact messages.",
+        message: "The form is temporarily unavailable. Please email Ace directly instead.",
       },
       { status: 503 },
     );
