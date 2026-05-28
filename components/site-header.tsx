@@ -10,6 +10,7 @@ import { Link } from "@/i18n/navigation";
 
 const links = [
   { href: "/projects", labelKey: "projects" },
+  { href: "/quick-help", labelKey: "quickHelp" },
   { href: "/#notes", labelKey: "notes" },
   { href: "/about", labelKey: "about" },
   { href: "/contact", labelKey: "contact" },
