@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ArrowRight, Bot, CheckCircle2, Clock, Code2, Database, Mail, Smartphone } from "lucide-react";
+import { ArrowRight, Bot, CheckCircle2, Clock, Code2, Database, Mail, ShoppingBag, Smartphone } from "lucide-react";
 import { setRequestLocale } from "next-intl/server";
 import { TrackedLink } from "@/components/tracked-link";
 
@@ -42,6 +42,7 @@ const proof = [
 const contactEmail = "acewang377@gmail.com";
 const contactSubject = "GBP 20 Same-Day Tech Help";
 const mailtoHref = `mailto:${contactEmail}?subject=${encodeURIComponent(contactSubject)}`;
+const purchaseHref = "https://avorily.com/products/gbp-20-same-day-tech-admin-sprint";
 
 export default async function QuickHelpPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -61,8 +62,15 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a
-                href={mailtoHref}
+                href={purchaseHref}
                 className="inline-flex h-12 items-center gap-2 rounded-[8px] bg-white px-5 text-sm font-black text-[#101211] transition hover:bg-[#eafbfd]"
+              >
+                Buy the GBP 20 sprint
+                <ShoppingBag size={16} />
+              </a>
+              <a
+                href={mailtoHref}
+                className="inline-flex h-12 items-center gap-2 rounded-[8px] border border-white/20 px-5 text-sm font-black text-white transition hover:bg-white/10"
               >
                 Email the task
                 <Mail size={16} />
@@ -96,6 +104,18 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
                     <Clock size={18} className="text-[#00a5b0]" />
                     Today or within 24 hours
                   </p>
+                </div>
+                <div>
+                  <p className="text-sm font-black uppercase tracking-[0.14em] text-[#68716b]">
+                    Purchase
+                  </p>
+                  <a
+                    href={purchaseHref}
+                    className="mt-2 inline-flex items-center gap-2 text-xl font-black tracking-[-0.03em] text-[#101211] transition hover:text-[#007e87]"
+                  >
+                    Shopify checkout
+                    <ShoppingBag size={18} className="text-[#00a5b0]" />
+                  </a>
                 </div>
                 <div>
                   <p className="text-sm font-black uppercase tracking-[0.14em] text-[#68716b]">
@@ -172,10 +192,17 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href={mailtoHref}
+              href={purchaseHref}
               className="inline-flex h-12 items-center gap-2 rounded-[8px] bg-white px-5 text-sm font-black text-[#101211] transition hover:bg-[#eafbfd]"
             >
-              Email a GBP 20 task
+              Buy the GBP 20 sprint
+              <ShoppingBag size={16} />
+            </a>
+            <a
+              href={mailtoHref}
+              className="inline-flex h-12 items-center gap-2 rounded-[8px] border border-white/18 px-5 text-sm font-black text-white transition hover:bg-white/10"
+            >
+              Email the task
               <Mail size={16} />
             </a>
             <TrackedLink
