@@ -12,7 +12,12 @@ const quickHelpSlug = "quick-help";
 
 function normalizeProject(value?: string) {
   if (!value) return "";
-  if (value === quickHelpSlug || value.toLowerCase().includes("quick tech help")) {
+  const normalized = value.toLowerCase();
+  if (
+    value === quickHelpSlug ||
+    normalized.includes("quick tech help") ||
+    normalized.includes("same-day tech help")
+  ) {
     return quickHelpSlug;
   }
 

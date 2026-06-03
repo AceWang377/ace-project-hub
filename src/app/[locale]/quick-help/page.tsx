@@ -4,9 +4,9 @@ import { setRequestLocale } from "next-intl/server";
 import { TrackedLink } from "@/components/tracked-link";
 
 export const metadata: Metadata = {
-  title: "GBP 10 Quick Tech Help",
+  title: "GBP 20 Same-Day Tech Help",
   description:
-    "Small AI, backend, iOS, data, and automation help from Ace for GBP 10 starter tasks.",
+    "Same-day AI, backend, iOS, data, spreadsheet, and website help from Ace for GBP 20 focused tasks.",
 };
 
 const offers = [
@@ -40,7 +40,7 @@ const proof = [
 ];
 
 const contactEmail = "acewang377@gmail.com";
-const contactSubject = "GBP 10 Quick Tech Help";
+const contactSubject = "GBP 20 Same-Day Tech Help";
 const mailtoHref = `mailto:${contactEmail}?subject=${encodeURIComponent(contactSubject)}`;
 
 export default async function QuickHelpPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -53,11 +53,11 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
         <div className="container-x grid min-h-[calc(100vh-64px)] items-center gap-10 py-14 md:grid-cols-[1fr_0.86fr] md:py-18">
           <div className="min-w-0 max-w-full">
             <h1 className="max-w-4xl text-[2rem] font-black leading-[1.04] tracking-[-0.035em] sm:text-5xl md:text-7xl md:leading-[0.97] md:tracking-[-0.055em]">
-              <span className="block">GBP 10 tech help.</span>
-              <span className="block">One small stuck point.</span>
+              <span className="block">GBP 20 tech sprint.</span>
+              <span className="block">Same-day practical help.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg font-medium leading-8 text-white/68 md:text-xl">
-              Send one small AI, backend, iOS, data, spreadsheet, app, or website question. I will return a clear fix note, tidy-up, or next-step checklist.
+              Send one focused AI, backend, iOS, data, spreadsheet, app, CV, or website task. I will return a clear fix note, tidy-up, or next-step checklist today or within 24 hours.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <a
@@ -68,7 +68,7 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
                 <Mail size={16} />
               </a>
               <TrackedLink
-                href="/contact?project=GBP%2010%20Quick%20Tech%20Help"
+                href="/contact?project=GBP%2020%20Same-Day%20Tech%20Help"
                 eventName="quick_help_contact_click"
                 className="inline-flex h-12 items-center gap-2 rounded-[8px] border border-white/20 px-5 text-sm font-black text-white transition hover:bg-white/10"
               >
@@ -84,7 +84,7 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
                   Starter task
                 </span>
                 <span className="shrink-0 rounded-[8px] bg-[#101211] px-3 py-1 text-sm font-black text-white">
-                  GBP 10
+                  GBP 20
                 </span>
               </div>
               <div className="mt-6 grid gap-4">
@@ -113,7 +113,7 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
                 </div>
                 <div className="rounded-[8px] border border-[#101211]/10 bg-white p-4">
                   <p className="text-sm leading-6 text-[#626b65]">
-                    Best for one small task: one question, one bug note, one document, one table, or one short review. Larger work can be scoped separately.
+                    Best for one focused outcome: a CV/document tidy-up, spreadsheet clean-up, bug note, AI workflow review, website/app feedback, or short technical next-step plan.
                   </p>
                 </div>
               </div>
@@ -126,7 +126,7 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
         <div className="max-w-3xl">
           <p className="text-sm font-black uppercase tracking-[0.16em] text-[#68716b]">What I can do</p>
           <h2 className="mt-3 text-4xl font-black tracking-[-0.055em] md:text-6xl">
-            Pick one small outcome.
+            Pick one focused outcome.
           </h2>
         </div>
         <div className="mt-10 grid gap-4 md:grid-cols-2">
@@ -168,18 +168,18 @@ export default async function QuickHelpPage({ params }: { params: Promise<{ loca
             Send one task, get one useful answer.
           </h2>
           <p className="mt-5 max-w-2xl text-base leading-7 text-white/62">
-            Please avoid passwords, bank details, private account access, identity documents, or confidential client data. Describe the problem and include screenshots or non-sensitive snippets if useful.
+            Please avoid passwords, bank details, private account access, identity documents, or confidential client data. Describe the problem and include screenshots, rough notes, or non-sensitive snippets if useful.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={mailtoHref}
               className="inline-flex h-12 items-center gap-2 rounded-[8px] bg-white px-5 text-sm font-black text-[#101211] transition hover:bg-[#eafbfd]"
             >
-              Email a GBP 10 task
+              Email a GBP 20 task
               <Mail size={16} />
             </a>
             <TrackedLink
-              href="/contact?project=GBP%2010%20Quick%20Tech%20Help"
+              href="/contact?project=GBP%2020%20Same-Day%20Tech%20Help"
               eventName="quick_help_bottom_contact_click"
               className="inline-flex h-12 items-center gap-2 rounded-[8px] border border-white/18 px-5 text-sm font-black text-white transition hover:bg-white/10"
             >
